@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import Card from "./shared/Card";
 import EmployeeContext from "../context/EmployeeContext";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 
 export const EmployeeForm = () => {
@@ -15,7 +15,7 @@ export const EmployeeForm = () => {
 
   useEffect(() => {
     console.log("Employee data changing ");
-    if (updateEmployee.flag == true) {
+    if (updateEmployee.flag === true) {
       setFirstName(updateEmployee.data.firstName);
       setLastName(updateEmployee.data.lastName);
       setEmail(updateEmployee.data.email);
@@ -39,7 +39,7 @@ export const EmployeeForm = () => {
           lastName,
           email,
         };
-        if (updateEmployee.flag == true) {
+        if (updateEmployee.flag === true) {
           emp.id = updateEmployee.data.id;
           updateEmployeeDetails(updateEmployee.data.id, emp);
           updateEmployee.flag = false;
@@ -49,7 +49,7 @@ export const EmployeeForm = () => {
           Navigate("/employees");
         }
       }
-      else if(firstName == "" || lastName == "" || email == "" ){
+      else if(firstName === "" || lastName === "" || email === "" ){
         alert("Please fill up all the fields");
       }
        else {
@@ -97,7 +97,7 @@ export const EmployeeForm = () => {
               
             />
           </div>
-          <div className="col-md-12">
+          <div className="col-md-6">
             <label htmlFor="validationDefaultUsername" className="form-label">
               Email
             </label>
@@ -134,7 +134,7 @@ export const EmployeeForm = () => {
             </button>
             </div>
             <div className="col-2">
-            <button className="btn btn-secondary"  onClick = {() => {
+            <button className="btn btn-secondary "  onClick = {() => {
                 setFirstName("");
                 setLastName("");
                 setEmail("");

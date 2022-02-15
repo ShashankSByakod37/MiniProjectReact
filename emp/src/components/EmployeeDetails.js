@@ -20,20 +20,24 @@ export const EmployeeDetails = () => {
   // };
   return (
     <>
-      <Card>
+      <Card reverse = {true} style = {{width : "70%",
+                      margin : "auto 15%",
+                      }}>
 
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-10">
-              <h1>
-                {emp.firstName} {emp.lastName}
-              </h1>
-              <h3>{emp.email}</h3>
+            <div className="col-md-10 display-4" style={{textAlign : "center"}}>
+              
+                <strong>Full Name : </strong>{emp.firstName} {emp.lastName}
+              {/* <br /> */}
+              <div >
+              <strong>Email id : </strong>{emp.email}
+              </div>
             </div>
           </div>
         </div>
       </Card>
-      <button className="btn btn-primary" 
+      <button style = {{marginLeft:"20%"}} className="btn btn-primary" 
         onClick={() => {
           navigate("/employees");
         }}

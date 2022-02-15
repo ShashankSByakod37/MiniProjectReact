@@ -21,8 +21,8 @@ code {
   color: #333;
   border-radius: 15px;
   padding: 40px 50px;
-  margin: 5% 10%;
-  width:80%;
+  margin: 5% 5%;
+  width:90%;
   position: relative;
 }
 
@@ -68,4 +68,9 @@ td{
   margin: 20%;
   margin-top: auto;
   box-sizing: border-box;
+}
+
+Link:active{
+  background-color: aqua;
+  color :rgb(34, 40, 44)
 }

@@ -15,7 +15,7 @@ export const Employees = () => {
 
     console.log(employees);
   }, [employees]);
-  if (!employees || employees.length == 0) {
+  if (!employees || employees.length === 0) {
     return (
         <div className="col-md-6" style={{
             width: "60%",
@@ -65,8 +65,8 @@ export const Employees = () => {
         </table>
       </Card>
       <button
-      style = {{marginLeft : "12%"}}
-        className="btn btn-primary"
+      style = {{marginLeft : "7%",marginBottom:"15%"}}
+        className="btn btn-primary h3"
         onClick={() => {
           navigate("/form");
         }}
