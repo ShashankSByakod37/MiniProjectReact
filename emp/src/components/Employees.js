@@ -45,8 +45,8 @@ export const Employees = () => {
 
   return (
     <>
-      <Card>
-        <table class="table table-hover">
+      <Card reverse = {false}>
+        <table class="table table-hover" >
           <thead>
             <TableHeader />
           </thead>
@@ -65,6 +65,7 @@ export const Employees = () => {
         </table>
       </Card>
       <button
+      style = {{marginLeft : "12%"}}
         className="btn btn-primary"
         onClick={() => {
           navigate("/form");

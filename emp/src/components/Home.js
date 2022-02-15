@@ -1,12 +1,13 @@
 import React from 'react'
 import Card from './shared/Card'
+import emp from '../emp.png';
 export const Home = () => {
   return (
 
-    <Card>
-      <div>
-        hello world
+    <>
+      <div className=' container'> 
+      <div className="image"><img src={emp}/></div>
       </div>
-    </Card>
+    </>
   )
 }

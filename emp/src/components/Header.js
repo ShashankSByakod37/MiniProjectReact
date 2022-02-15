@@ -1,27 +1,30 @@
 import {Link} from "react-router-dom";
+import emp from "../emp.png";
 
 export const Header = () => {
     
   return (
     <>
+    
       <ul className="nav">
+
       <li className="nav-item active">
-          <Link className="nav-link " aria-current="page" to = "/">
+          <Link className="nav-link h3 " aria-current="page" to = "/">
             Home
           </Link>
         </li>
         <li className="nav-item active">
-          <Link className="nav-link " aria-current="page" to = "/about">
+          <Link className="nav-link h3" aria-current="page" to = "/about">
             About
           </Link>
         </li>
         <li className="nav-item active">
-          <Link className="nav-link " aria-current="page" to = "/form">
+          <Link className="nav-link h3" aria-current="page" to = "/form">
             Form
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link " to = "/employees">
+          <Link className="nav-link h3" to = "/employees">
           EmployDetails
           </Link>
         </li>
@@ -32,6 +35,7 @@ export const Header = () => {
         </li>
        
       </ul>
+      {/* <div className="image"><img src={emp}/></div> */}
     </>
   );
 };
