@@ -9,7 +9,9 @@ export const EmployeeDetails = () => {
 
   const emp = employees.find((emp) => emp.id == id);
 
-  {console.log(emp)}
+  {
+    console.log(emp);
+  }
 
   const navigate = useNavigate();
   // const EmployeeStyling = {
@@ -20,24 +22,27 @@ export const EmployeeDetails = () => {
   // };
   return (
     <>
-      <Card reverse = {true} style = {{width : "70%",
-                      margin : "auto 15%",
-                      }}>
-
+      <Card reverse={true} style={{ width: "70%", margin: "auto 15%" }}>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-10 display-4" style={{textAlign : "center"}}>
-              
-                <strong>Full Name : </strong>{emp.firstName} {emp.lastName}
+            <div
+              className="col-md-10 display-4"
+              style={{ textAlign: "center" }}
+            >
+              <strong>Full Name : </strong>
+              {emp.firstName} {emp.lastName}
               {/* <br /> */}
-              <div >
-              <strong>Email id : </strong>{emp.email}
+              <div>
+                <strong>Email id : </strong>
+                {emp.email}
               </div>
             </div>
           </div>
         </div>
       </Card>
-      <button style = {{marginLeft:"20%"}} className="btn btn-primary" 
+      <button
+        style={{ marginLeft: "20%" }}
+        className="btn btn-primary"
         onClick={() => {
           navigate("/employees");
         }}

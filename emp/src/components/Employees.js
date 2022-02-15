@@ -17,36 +17,42 @@ export const Employees = () => {
   }, [employees]);
   if (!employees || employees.length === 0) {
     return (
-        <div className="col-md-6" style={{
-            width: "60%",
-            margin: "auto",
-            padding: "10px",
-        }}>
-        <Card  reverse = {true}>
-      <div className="container">
-        <div className="row" style = {{textAlign:"center"}}>Fill up the form to view Employee Details...!</div>
-        <div className="row">
-          <div className="auto">
-            <button style = {{margin:"15%"}}
-              className="btn btn-primary "
-              onClick={() => {
-                navigate("/form");
-              }}
-            >
-              Move to Form{" "}
-            </button>
-          </div>
-        </div>
-      </div>
-      </Card>
+      <div
+        className="col-md-6"
+        style={{
+          width: "60%",
+          margin: "auto",
+          padding: "10px",
+        }}
+      >
+        <Card reverse={true}>
+          <div className="container">
+            <div className="row" style={{ textAlign: "center" }}>
+              Fill up the form to view Employee Details...!
+            </div>
+            <div className="row">
+              <div className="auto">
+                <button
+                  style={{ margin: "15%" }}
+                  className="btn btn-primary "
+                  onClick={() => {
+                    navigate("/form");
+                  }}
+                >
+                  Move to Form{" "}
+                </button>
               </div>
+            </div>
+          </div>
+        </Card>
+      </div>
     );
   }
 
   return (
     <>
-      <Card reverse = {false}>
-        <table class="table table-hover" >
+      <Card reverse={false}>
+        <table className="table table-hover">
           <thead>
             <TableHeader />
           </thead>
@@ -65,7 +71,7 @@ export const Employees = () => {
         </table>
       </Card>
       <button
-      style = {{marginLeft : "7%",marginBottom:"15%"}}
+        style={{ marginLeft: "7%", marginBottom: "15%" }}
         className="btn btn-primary h3"
         onClick={() => {
           navigate("/form");

@@ -26,8 +26,6 @@ export const EmployeeForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
-    
     try {
       if (
         firstName.trim().length + lastName.trim().length > 4 &&
@@ -48,21 +46,18 @@ export const EmployeeForm = () => {
           addEmployee(emp);
           Navigate("/employees");
         }
-      }
-      else if(firstName === "" || lastName === "" || email === "" ){
+      } else if (firstName === "" || lastName === "" || email === "") {
         alert("Please fill up all the fields");
-      }
-       else {
+      } else {
         alert("Please fill the form correctly");
       }
     } catch (e) {
       console.log(e);
-    } 
-      setFirstName("");
-      setLastName("");
-      setEmail("");
+    }
+    setFirstName("");
+    setLastName("");
+    setEmail("");
     //   Navigate("/employees");
-    
   };
 
   return (
@@ -81,7 +76,6 @@ export const EmployeeForm = () => {
               onChange={(e) => {
                 setFirstName(e.target.value);
               }}
-              
             />
           </div>
           <div className="col-md-6">
@@ -94,7 +88,6 @@ export const EmployeeForm = () => {
               id="validationDefault02"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              
             />
           </div>
           <div className="col-md-6">
@@ -109,7 +102,6 @@ export const EmployeeForm = () => {
                 aria-describedby="inputGroupPrepend2"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                
               />
             </div>
           </div>
@@ -132,13 +124,17 @@ export const EmployeeForm = () => {
             <button className="btn btn-primary" type="submit">
               Submit form
             </button>
-            </div>
-            <div className="col-2">
-            <button className="btn btn-secondary "  onClick = {() => {
+          </div>
+          <div className="col-2">
+            <button
+              className="btn btn-secondary "
+              onClick={() => {
                 setFirstName("");
                 setLastName("");
                 setEmail("");
-            }}type="reset">
+              }}
+              type="reset"
+            >
               Reset form
             </button>
           </div>

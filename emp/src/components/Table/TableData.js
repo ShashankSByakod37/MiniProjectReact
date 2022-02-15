@@ -7,20 +7,20 @@ export const TableData = ({ emp, deleteEmployee, updateChange }) => {
   const navi = useNavigate();
   return (
     <>
-      <tr key={emp.id} >
+      <tr key={emp.id}>
+        <td>
         <Link
           className="list-group-item list-group-item-action display-6"
-          style= {{border:"none"}}
+          style={{ border: "none" }}
           to={`/employees/${emp.id}`}
           value="here"
         >
-          <td >
             {emp.firstName} {emp.lastName}
-          </td>
           {/* <td>{emp.email}</td> */}
         </Link>
+          </td>
         <td>
-          <div className=" deleteIcons " style= {{border:"none"}}>
+          <div className=" deleteIcons " style={{ border: "none" }}>
             <Icon
               tooltip=""
               name="delete"
@@ -39,7 +39,7 @@ export const TableData = ({ emp, deleteEmployee, updateChange }) => {
             navi("/form")
         }}>Update</button> */}
 
-          <div className=" editIcons" style= {{border:"none"}}>
+          <div className=" editIcons" style={{ border: "none" }}>
             <Icon
               name="edit"
               onClick={() => {
